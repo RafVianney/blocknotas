@@ -13,15 +13,19 @@
   }
   
   .app {
-    width: 300px;
+    width: 400px;
     padding: 20px;
-    background-color: white;
+    /*background-color: white;*/
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
   }
   
   h1 {
     text-align: center;
+    margin-top: 0px;
+    margin-bottom: 2rem;
   }
   
   .input-container {
@@ -83,4 +87,22 @@
     border-radius: 8px;
     text-align: center;
   }
-  
+  .addtaskicon {
+    max-width: 2rem;
+  }
+  .adorno
+  {
+    
+    background-image: url("./img/blocknotasa.png");
+    background-size: cover;
+    width: 100%;
+    height:50px;
+    z-index: 20;
+    
+  }
+  .cuerponota{
+
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("./img/blocknotas.png") repeat-y;
+    top: -28px;
+     position: relative;
+  }

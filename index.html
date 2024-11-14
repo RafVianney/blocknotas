@@ -8,15 +8,17 @@
 </head>
 <body>
   <div class="app">
+    <section class="adorno"></section>
+    <section class="cuerponota">
     <h1>Lista de Tareas</h1>
     <section class="topmenu">
     <form class="input-container">
       <input type="text" id="taskInput" placeholder="Escribe una tarea..." onkeydown="handleEnter(event)">
-      <button onclick="addTask()">Agregar Tarea</button>
+      <button onclick="addTask()"><img class="addtaskicon" src="./img/add-task.png" alt="add task"></button>
     </form>
   </section>
 
-<section class="botonescontrol"></section>
+<section class="botonescontrol">
     <div class="controls">
       <button onclick="toggleSortOrder()">Ordenar (Nuevas/Viejas)</button>
       <button id="filterBtn" onclick="cycleFilter()">Mostrar Todas</button>
@@ -25,6 +27,8 @@
     <ul id="taskList"></ul>
     <button id="deleteSelectedBtn" onclick="openModal()">Borrar Tareas Seleccionadas</button>
   </div>
+</section>
+</section>
 </div>
   <!-- Modal de confirmación -->
   <div id="confirmModal" class="modal">

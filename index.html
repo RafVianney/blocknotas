@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <h1>Lista de Tareas</h1>
+    <section class="topmenu">
+    <form class="input-container">
+      <input type="text" id="taskInput" placeholder="Escribe una tarea..." onkeydown="handleEnter(event)">
+      <button onclick="addTask()">Agregar Tarea</button>
+    </form>
+  </section>
+
+<section class="botonescontrol"></section>
+    <div class="controls">
+      <button onclick="toggleSortOrder()">Ordenar (Nuevas/Viejas)</button>
+      <button id="filterBtn" onclick="cycleFilter()">Mostrar Todas</button>
+      <button onclick="deleteCompletedTasks()">Borrar Completadas</button>
+    </div>
+    <ul id="taskList"></ul>
+    <button id="deleteSelectedBtn" onclick="openModal()">Borrar Tareas Seleccionadas</button>
+  </div>
+</div>
+  <!-- Modal de confirmación -->
+  <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <p>¿Estás seguro de que deseas borrar las tareas seleccionadas?</p>
+      <button onclick="deleteSelectedTasks()">Sí</button>
+      <button onclick="closeModal()">No</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
